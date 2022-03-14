@@ -1,0 +1,24 @@
+data:
+    train:
+        input:
+            source: data/vi-en/train/train.src
+            target: data/vi-en/train/train.mt
+
+        output:
+            sentence_scores: data/vi-en/train/train.bleu
+
+    valid:
+        input:
+            source: data/vi-en/valid/valid.src
+            source: data/vi-en/valid/valid.mt
+
+        output:
+            sentence_scores: data/vi-en/valid/valid.bleu
+
+    test:
+        input:
+            source: data/vi-en/test/test.src
+            source: data/vi-en/test/test.mt
+           
+        output:
+            sentence_scores: data/vi-en/test/test.bleu
