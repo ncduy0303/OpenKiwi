@@ -10,7 +10,7 @@ data:
     valid:
         input:
             source: data/vi-en/valid/valid.src
-            source: data/vi-en/valid/valid.mt
+            target: data/vi-en/valid/valid.mt
 
         output:
             sentence_scores: data/vi-en/valid/valid.bleu
@@ -18,7 +18,4 @@ data:
     test:
         input:
             source: data/vi-en/test/test.src
-            source: data/vi-en/test/test.mt
-           
-        output:
-            sentence_scores: data/vi-en/test/test.bleu
+            target: data/vi-en/test/test.mt
