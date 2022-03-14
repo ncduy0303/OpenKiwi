@@ -5,7 +5,7 @@ run:
     predict_on_data_partition: test
 
 defaults:
-    - data: wmt20.qe.en_de
+    - data: qe.vi_en
 
 system:
     load: best_model.torch
@@ -16,8 +16,8 @@ system:
     model:
         outputs:
             word_level:
-                target: true
-                gaps: true
-                source: true
+                target: false
+                gaps: false
+                source: false
             sentence_level:
                 hter: true
