@@ -1,5 +1,5 @@
 run:
-    experiment_name: PredictorEstimator WMT20 EN-DE
+    experiment_name: PredictorEstimator VI-EN
     seed: 42
     use_mlflow: false
 
@@ -8,7 +8,6 @@ trainer:
     epochs: 10
 
     main_metric:
-        - WMT19_MCC
         - PEARSON
 
     log_interval: 100
@@ -17,7 +16,7 @@ trainer:
         early_stop_patience: 10
 
 defaults:
-    - data: wmt20.qe.en_de
+    - data: qe.vi_en
 
 system:
     class_name: PredictorEstimator
@@ -50,7 +49,7 @@ system:
 
         outputs:
             word_level:
-                target: true
+                target: false
                 gaps: false
                 source: false
                 class_weights:
@@ -62,7 +61,7 @@ system:
                         BAD: 3.0
             sentence_level:
                 hter: true
-                use_distribution: true
+                use_distribution: false
                 binary: false
 
         tlm_outputs:
